@@ -1,0 +1,7 @@
+ public int absolute(int I) {
+        if(I<0){
+           return I=I*-1;
+        }else{
+            return I;
+        }
+    }

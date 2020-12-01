@@ -1,0 +1,36 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class NoOfdigits {
+    public static void main(String[] args)throws Exception {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextInt();
+        System.out.println(countDigitMath(n));
+//        System.out.println(countdigitrecursive(n));
+        coundDigitIterative(n);
+
+    }
+
+     static  int countDigitMath(long n){
+        return (int)Math.floor(Math.log10(n)+1);
+     }
+     static int countdigitrecursive(int n){
+        if (n==0){
+            return 0;
+        }else {
+            return 1+countdigitrecursive(n/10);
+        }
+    }
+    static int coundDigitIterative(int n){
+        int digit = 0
+        if (n==0){
+            return 0;
+        }else {
+          digit++;
+          n=n/10;
+        }
+        System.out.println(digit);
+    }
+
+}
